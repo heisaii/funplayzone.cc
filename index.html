@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kick & Bass - World Cup 2026 music and culture</title>
+    <meta
+      name="description"
+      content="A static magazine-style blog template for World Cup 2026 music, culture, artists, playlists, cities, and matchday stories."
+    />
+    <meta property="og:title" content="Kick & Bass - World Cup 2026 music and culture" />
+    <meta
+      property="og:description"
+      content="A static editorial site for World Cup 2026 music news, playlist culture, city scenes, and matchday sound."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="utility-bar">
+        <span>World Cup 2026 Music Desk</span>
+        <nav aria-label="Utility links">
+          <a href="#playlist">Playlist</a>
+          <a href="#cities">Cities</a>
+          <a href="./admin.html">Submit</a>
+        </nav>
+      </div>
+
+      <div class="brand-row">
+        <button class="icon-button" aria-label="Open sections">☰</button>
+        <a class="brand" href="./index.html" aria-label="Kick and Bass home">
+          <span>Kick</span><strong>&</strong>Bass
+        </a>
+        <a class="issue-link" href="#latest">Issue 001</a>
+      </div>
+
+      <nav class="channel-nav" aria-label="Sections">
+        <a href="#latest">New Music</a>
+        <a href="#cities">City Scenes</a>
+        <a href="#playlist">Playlists</a>
+        <a href="#live">Live</a>
+        <a href="#features">Features</a>
+        <a href="#sources">Sources</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="ticker" aria-label="Latest updates">
+        <strong>On Rotation</strong>
+        <div id="tickerItems"></div>
+      </section>
+
+      <section class="front-grid" aria-label="Top stories">
+        <article class="lead-story" id="leadStory"></article>
+        <aside class="stack-column" id="stackColumn"></aside>
+        <aside class="chart-panel">
+          <p class="eyebrow">Tracklist</p>
+          <h2>Matchday Starters</h2>
+          <ol id="trackList"></ol>
+        </aside>
+      </section>
+
+      <section class="section-block" id="latest">
+        <div class="section-heading">
+          <h2>The Mix</h2>
+          <a href="./article.html?id=playlist-watch">View playlist notes</a>
+        </div>
+        <div class="card-grid" id="latestGrid"></div>
+      </section>
+
+      <section class="wide-feature" id="playlist">
+        <div class="cover-well">
+          <img
+            src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1600&q=85"
+            alt="A concert crowd lit by stage lights"
+          />
+        </div>
+        <div class="playlist-copy">
+          <p class="eyebrow">Playlist Brief</p>
+          <h2>Build the sound of a matchday before the first whistle.</h2>
+          <p>
+            Short notes on official songs, fan-made edits, city radio picks,
+            tunnel tracks, and post-match anthems.
+          </p>
+          <div class="playlist-grid" id="playlistGrid"></div>
+        </div>
+      </section>
+
+      <section class="section-block city-section" id="cities">
+        <div class="section-heading">
+          <h2>City Scenes</h2>
+          <a href="./article.html?id=mexico-city-stadium-sound">Start in Mexico City</a>
+        </div>
+        <div class="city-grid" id="cityGrid"></div>
+      </section>
+
+      <section class="source-band" id="sources">
+        <div>
+          <p class="eyebrow">Editorial Sources</p>
+          <h2>Hot topics from feeds, facts from primary sources.</h2>
+        </div>
+        <div class="source-list">
+          <a href="https://www.fifa.com/worldcup" rel="noopener noreferrer" target="_blank">FIFA World Cup</a>
+          <a href="https://gnews.io/" rel="noopener noreferrer" target="_blank">GNews trends</a>
+          <a href="https://open.spotify.com/" rel="noopener noreferrer" target="_blank">Spotify embeds</a>
+          <a href="https://www.youtube.com/" rel="noopener noreferrer" target="_blank">YouTube embeds</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand small" href="./index.html"><span>Kick</span><strong>&</strong>Bass</a>
+      <p>Independent World Cup 2026 music and culture blog template.</p>
+    </footer>
+
+    <script src="./data/articles.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
