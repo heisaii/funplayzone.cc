@@ -1,5 +1,265 @@
 window.SITE_ARTICLES = [
   {
+    "id": "2026-06-11-record-stores-world-cup-music-newsrooms",
+    "section": "Music News",
+    "label": "Sound Watch",
+    "kicker": "Music News",
+    "title": "Record Stores Are the Best World Cup Music Newsrooms",
+    "summary": "Why independent record shops can become a smarter lens for tournament songs than another generic streaming chart.",
+    "image": "./assets/images/posts/2026-06-11-record-stores-world-cup-music-newsrooms/cover.webp",
+    "imageAlt": "Editorial World Cup music cover for Record Stores Are the Best World Cup Music Newsrooms",
+    "time": "June 11, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Global",
+    "body": "./content/articles/2026-06-11-record-stores-world-cup-music-newsrooms.md",
+    "featured": true,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Verified links"
+      },
+      {
+        "title": "Listening angle",
+        "note": "Editor read"
+      }
+    ]
+  },
+  {
+    "id": "2026-06-11-radio-djs-shape-tournament-mood",
+    "section": "Music News",
+    "label": "Sound Watch",
+    "kicker": "Music News",
+    "title": "Radio DJs May Shape the Tournament Mood Before Playlists Do",
+    "summary": "Radio programming, call-ins, and local DJs can turn a World Cup song from release-day content into shared public atmosphere.",
+    "image": "./assets/images/posts/2026-06-11-radio-djs-shape-tournament-mood/cover.webp",
+    "imageAlt": "Editorial World Cup music cover for Radio DJs May Shape the Tournament Mood Before Playlists Do",
+    "time": "June 11, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Global",
+    "body": "./content/articles/2026-06-11-radio-djs-shape-tournament-mood.md",
+    "featured": false,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Verified links"
+      },
+      {
+        "title": "Listening angle",
+        "note": "Editor read"
+      }
+    ]
+  },
+  {
+    "id": "2026-06-11-hotel-lobby-playlists-traveling-fans",
+    "section": "Entertainment",
+    "label": "Guide",
+    "kicker": "Entertainment",
+    "title": "Hotel Lobby Playlists Are the Secret Soundtrack of Traveling Fans",
+    "summary": "The music fans hear between airport, hotel, bar, and stadium may shape tournament memory more than one official anthem.",
+    "image": "./assets/images/posts/2026-06-11-hotel-lobby-playlists-traveling-fans/cover.webp",
+    "imageAlt": "Editorial World Cup music cover for Hotel Lobby Playlists Are the Secret Soundtrack of Traveling Fans",
+    "time": "June 11, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Global",
+    "body": "./content/articles/2026-06-11-hotel-lobby-playlists-traveling-fans.md",
+    "featured": false,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Verified links"
+      },
+      {
+        "title": "Listening angle",
+        "note": "Editor read"
+      }
+    ]
+  },
+  {
+    "id": "2026-06-11-music-videos-visual-memory-world-cup-2026",
+    "section": "Music Videos",
+    "label": "Video Read",
+    "kicker": "Music Videos",
+    "title": "Music Videos Could Define the Visual Memory of World Cup 2026",
+    "summary": "The next tournament anthem may live as much through video language, styling, cuts, and short clips as through the song itself.",
+    "image": "./assets/images/posts/2026-06-11-music-videos-visual-memory-world-cup-2026/cover.webp",
+    "imageAlt": "Editorial World Cup music cover for Music Videos Could Define the Visual Memory of World Cup 2026",
+    "time": "June 11, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Global",
+    "body": "./content/articles/2026-06-11-music-videos-visual-memory-world-cup-2026.md",
+    "featured": false,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Verified links"
+      },
+      {
+        "title": "Listening angle",
+        "note": "Editor read"
+      }
+    ]
+  },
+  {
+    "id": "2026-06-11-street-markets-host-city-sound",
+    "section": "City Scenes",
+    "label": "City Scene",
+    "kicker": "Mexico City",
+    "title": "Street Markets Can Tell You More About a Host City Sound Than a Stage",
+    "summary": "Food markets, portable speakers, vendors, and fan routes can reveal the everyday rhythm of a host city.",
+    "image": "./assets/images/posts/2026-06-11-street-markets-host-city-sound/cover.webp",
+    "imageAlt": "Editorial World Cup music cover for Street Markets Can Tell You More About a Host City Sound Than a Stage",
+    "time": "June 11, 2026",
+    "author": "City Desk",
+    "city": "Mexico City",
+    "body": "./content/articles/2026-06-11-street-markets-host-city-sound.md",
+    "featured": false,
+    "type": "city",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Verified links"
+      },
+      {
+        "title": "Listening angle",
+        "note": "Editor read"
+      }
+    ]
+  },
+  {
+    "id": "2026-06-11-broadcast-theme-music-underrated-hook",
+    "section": "Entertainment",
+    "label": "Guide",
+    "kicker": "Entertainment",
+    "title": "Broadcast Theme Music Is the Tournament's Most Underrated Hook",
+    "summary": "Theme music, bumpers, transitions, and replay beds teach viewers how the tournament feels before the match begins.",
+    "image": "./assets/images/posts/2026-06-11-broadcast-theme-music-underrated-hook/cover.webp",
+    "imageAlt": "Editorial World Cup music cover for Broadcast Theme Music Is the Tournament's Most Underrated Hook",
+    "time": "June 11, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Global",
+    "body": "./content/articles/2026-06-11-broadcast-theme-music-underrated-hook.md",
+    "featured": false,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Verified links"
+      },
+      {
+        "title": "Listening angle",
+        "note": "Editor read"
+      }
+    ]
+  },
+  {
+    "id": "2026-06-11-airport-playlists-world-cup-trips",
+    "section": "Playlist",
+    "label": "Playlist",
+    "kicker": "Playlist",
+    "title": "Airport Playlists Are Where World Cup Trips Actually Begin",
+    "summary": "The travel-day soundtrack needs patience, movement, and anticipation instead of instant stadium hype.",
+    "image": "./assets/images/posts/2026-06-11-airport-playlists-world-cup-trips/cover.webp",
+    "imageAlt": "Editorial World Cup music cover for Airport Playlists Are Where World Cup Trips Actually Begin",
+    "time": "June 11, 2026",
+    "author": "Playlist Desk",
+    "city": "Global",
+    "body": "./content/articles/2026-06-11-airport-playlists-world-cup-trips.md",
+    "featured": false,
+    "type": "playlist",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Verified links"
+      },
+      {
+        "title": "Listening angle",
+        "note": "Editor read"
+      }
+    ]
+  },
+  {
+    "id": "2026-06-11-jerseys-music-videos-tournament-style-loop",
+    "section": "Style",
+    "label": "Style",
+    "kicker": "Style",
+    "title": "Jerseys, Music Videos, and the New Tournament Style Loop",
+    "summary": "Football shirts, artist styling, videos, and fan edits now feed each other in the same entertainment cycle.",
+    "image": "./assets/images/posts/2026-06-11-jerseys-music-videos-tournament-style-loop/cover.webp",
+    "imageAlt": "Editorial World Cup music cover for Jerseys, Music Videos, and the New Tournament Style Loop",
+    "time": "June 11, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Global",
+    "body": "./content/articles/2026-06-11-jerseys-music-videos-tournament-style-loop.md",
+    "featured": false,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Verified links"
+      },
+      {
+        "title": "Listening angle",
+        "note": "Editor read"
+      }
+    ]
+  },
+  {
+    "id": "2026-06-11-quiet-songs-after-knockout-loss",
+    "section": "Playlist",
+    "label": "Playlist",
+    "kicker": "Playlist",
+    "title": "The Quiet Songs After a Knockout Loss Matter Too",
+    "summary": "Not every World Cup playlist should be built for celebration. Some of the most useful songs are for the walk home.",
+    "image": "./assets/images/posts/2026-06-11-quiet-songs-after-knockout-loss/cover.webp",
+    "imageAlt": "Editorial World Cup music cover for The Quiet Songs After a Knockout Loss Matter Too",
+    "time": "June 11, 2026",
+    "author": "Playlist Desk",
+    "city": "Global",
+    "body": "./content/articles/2026-06-11-quiet-songs-after-knockout-loss.md",
+    "featured": false,
+    "type": "playlist",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Verified links"
+      },
+      {
+        "title": "Listening angle",
+        "note": "Editor read"
+      }
+    ]
+  },
+  {
+    "id": "2026-06-11-short-video-changing-fan-anthems",
+    "section": "Music News",
+    "label": "Sound Watch",
+    "kicker": "Music News",
+    "title": "Short Video Is Changing How Fan Anthems Break",
+    "summary": "A World Cup song may now become popular through ten-second uses before listeners ever hear the full track.",
+    "image": "./assets/images/posts/2026-06-11-short-video-changing-fan-anthems/cover.webp",
+    "imageAlt": "Editorial World Cup music cover for Short Video Is Changing How Fan Anthems Break",
+    "time": "June 11, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Global",
+    "body": "./content/articles/2026-06-11-short-video-changing-fan-anthems.md",
+    "featured": false,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Verified links"
+      },
+      {
+        "title": "Listening angle",
+        "note": "Editor read"
+      }
+    ]
+  },
+  {
     "id": "2026-06-10-world-cup-soundtrack-ecosystem",
     "section": "New Music",
     "label": "Sound Watch",
@@ -12,7 +272,7 @@ window.SITE_ARTICLES = [
     "author": "Kick & Bass Editors",
     "city": "Global",
     "body": "./content/articles/2026-06-10-world-cup-soundtrack-ecosystem.md",
-    "featured": true,
+    "featured": false,
     "type": "feature",
     "tracks": [
       {
