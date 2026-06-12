@@ -537,9 +537,30 @@ main {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 14px 0 10px;
+  color: var(--ink);
+  font: 900 12px Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.footer-links a {
+  border-bottom: 2px solid var(--red);
+}
+
 .article-page {
   max-width: 860px;
   padding: 26px;
+}
+
+.legal-page h1 {
+  color: var(--title);
+  margin: 8px 0 18px;
+  font-size: 68px;
+  line-height: 0.9;
 }
 
 .article-hero h1,
