@@ -1,5 +1,135 @@
 window.SITE_ARTICLES = [
   {
+    "id": "2026-06-15-can-shakira-and-burna-boy-dai-dai-bring-back-the-world-cup-anthem",
+    "section": "Music News",
+    "label": "Anthem Watch",
+    "kicker": "World Cup Songs",
+    "title": "Can Shakira and Burna Boy's \"Dai Dai\" Bring Back the World Cup Anthem?",
+    "summary": "Shakira and Burna Boy's \"Dai Dai\" tries to revive the global football anthem while standing under the long shadow of \"Waka Waka.\"",
+    "image": "./assets/images/posts/2026-06-15-can-shakira-and-burna-boy-dai-dai-bring-back-the-world-cup-anthem/cover.webp",
+    "imageAlt": "Editorial World Cup music cover for Can Shakira and Burna Boy's \"Dai Dai\" Bring Back the World Cup Anthem?",
+    "time": "June 15, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Global",
+    "body": "./content/articles/2026-06-15-can-shakira-and-burna-boy-dai-dai-bring-back-the-world-cup-anthem.md",
+    "featured": true,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Verified links"
+      },
+      {
+        "title": "Listening angle",
+        "note": "Editor read"
+      }
+    ]
+  },
+  {
+    "id": "2026-06-15-every-official-world-cup-song-ranked-from-notti-magiche-to-waka-waka",
+    "section": "Music News",
+    "label": "Ranked",
+    "kicker": "World Cup Songs",
+    "title": "Every Official World Cup Song Ranked, From \"Notti Magiche\" to \"Waka Waka\"",
+    "summary": "From Ricky Martin to Shakira, the official World Cup song canon shows why football anthems only last when fans make them their own.",
+    "image": "./assets/images/posts/2026-06-15-every-official-world-cup-song-ranked-from-notti-magiche-to-waka-waka/cover.webp",
+    "imageAlt": "Editorial World Cup music cover for Every Official World Cup Song Ranked, From \"Notti Magiche\" to \"Waka Waka\"",
+    "time": "June 15, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Global",
+    "body": "./content/articles/2026-06-15-every-official-world-cup-song-ranked-from-notti-magiche-to-waka-waka.md",
+    "featured": false,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Verified links"
+      },
+      {
+        "title": "Listening angle",
+        "note": "Editor read"
+      }
+    ]
+  },
+  {
+    "id": "2026-06-15-the-songs-fifa-never-owned-but-the-whole-world-never-forgot",
+    "section": "Music News",
+    "label": "Unofficial Anthems",
+    "kicker": "World Cup Songs",
+    "title": "The Songs FIFA Never Owned - But The Whole World Never Forgot",
+    "summary": "Every tournament has official music, but crowds often choose a different soundtrack that outlives the campaign.",
+    "image": "./assets/images/posts/2026-06-15-the-songs-fifa-never-owned-but-the-whole-world-never-forgot/cover.webp",
+    "imageAlt": "Editorial World Cup music cover for The Songs FIFA Never Owned - But The Whole World Never Forgot",
+    "time": "June 15, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Global",
+    "body": "./content/articles/2026-06-15-the-songs-fifa-never-owned-but-the-whole-world-never-forgot.md",
+    "featured": false,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Verified links"
+      },
+      {
+        "title": "Listening angle",
+        "note": "Editor read"
+      }
+    ]
+  },
+  {
+    "id": "2026-06-15-why-are-world-cup-songs-so-hard-to-get-right",
+    "section": "Music News",
+    "label": "Essay",
+    "kicker": "World Cup Songs",
+    "title": "Why Are World Cup Songs So Hard to Get Right?",
+    "summary": "A World Cup song has to be a hit, a chant, a memory, and a global handshake at once, which is why so many collapse under the brief.",
+    "image": "./assets/images/posts/2026-06-15-why-are-world-cup-songs-so-hard-to-get-right/cover.webp",
+    "imageAlt": "Editorial World Cup music cover for Why Are World Cup Songs So Hard to Get Right?",
+    "time": "June 15, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Global",
+    "body": "./content/articles/2026-06-15-why-are-world-cup-songs-so-hard-to-get-right.md",
+    "featured": false,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Verified links"
+      },
+      {
+        "title": "Listening angle",
+        "note": "Editor read"
+      }
+    ]
+  },
+  {
+    "id": "2026-06-15-why-waka-waka-still-sounds-bigger-than-the-world-cup-itself",
+    "section": "Music News",
+    "label": "Classic",
+    "kicker": "World Cup Songs",
+    "title": "Why \"Waka Waka\" Still Sounds Bigger Than the World Cup Itself",
+    "summary": "More than a decade after South Africa 2010, Shakira and Freshlyground's anthem still feels like global emotional infrastructure.",
+    "image": "./assets/images/posts/2026-06-15-why-waka-waka-still-sounds-bigger-than-the-world-cup-itself/cover.webp",
+    "imageAlt": "Editorial World Cup music cover for Why \"Waka Waka\" Still Sounds Bigger Than the World Cup Itself",
+    "time": "June 15, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "South Africa",
+    "body": "./content/articles/2026-06-15-why-waka-waka-still-sounds-bigger-than-the-world-cup-itself.md",
+    "featured": false,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Verified links"
+      },
+      {
+        "title": "Listening angle",
+        "note": "Editor read"
+      }
+    ]
+  },
+  {
     "id": "2026-06-12-world-cup-theme-song-2026-job",
     "section": "Music News",
     "label": "Sound Watch",
@@ -12,7 +142,7 @@ window.SITE_ARTICLES = [
     "author": "Kick & Bass Editors",
     "city": "Global",
     "body": "./content/articles/2026-06-12-world-cup-theme-song-2026-job.md",
-    "featured": true,
+    "featured": false,
     "type": "feature",
     "tracks": [
       {
