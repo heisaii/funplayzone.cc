@@ -21,26 +21,26 @@ function isAdRenderableEnvironment() {
   return window.location.protocol !== "file:" && hostname !== "localhost" && hostname !== "127.0.0.1";
 }
 
+function syncAdShellVisibility(shell, adUnit) {
+  const status = adUnit.getAttribute("data-ad-status");
+  if (status === "unfilled") {
+    shell.classList.add("is-hidden");
+    return;
+  }
+  shell.classList.remove("is-hidden");
+}
+
 function watchAdFill(shell, adUnit) {
-  let attempts = 0;
-  const maxAttempts = 24;
-  const timer = window.setInterval(() => {
-    attempts += 1;
-    const status = adUnit.getAttribute("data-ad-status");
-    const hasFrame = Boolean(adUnit.querySelector("iframe"));
-    const hasVisibleHeight = adUnit.getBoundingClientRect().height > 20;
+  syncAdShellVisibility(shell, adUnit);
 
-    if (status === "filled" || hasFrame || hasVisibleHeight) {
-      shell.classList.remove("is-hidden");
-      window.clearInterval(timer);
-      return;
-    }
+  const observer = new MutationObserver(() => {
+    syncAdShellVisibility(shell, adUnit);
+  });
 
-    if (status === "unfilled" || attempts >= maxAttempts) {
-      shell.classList.add("is-hidden");
-      window.clearInterval(timer);
-    }
-  }, 500);
+  observer.observe(adUnit, {
+    attributes: true,
+    attributeFilter: ["data-ad-status"],
+  });
 }
 
 function meta(article) {
@@ -76,13 +76,18 @@ if (lead) {
 }
 
 const homepageAdShell = document.getElementById("homepageAdShell");
-if (homepageAdShell && homepageBannerAd.enabled && homepageBannerAd.slot && isAdRenderableEnvironment()) {
+if (homepageAdShell && homepageBannerAd.enabled && homepageBannerAd.slot) {
   const adUnit = homepageAdShell.querySelector(".adsbygoogle");
-  if (adUnit) {
-    adUnit.setAttribute("data-ad-slot", String(homepageBannerAd.slot));
-    watchAdFill(homepageAdShell, adUnit);
+  if (!isAdRenderableEnvironment()) {
+    homepageAdShell.classList.add("is-hidden");
   }
   if (adUnit) {
+    adUnit.setAttribute("data-ad-slot", String(homepageBannerAd.slot));
+    if (isAdRenderableEnvironment()) {
+      watchAdFill(homepageAdShell, adUnit);
+    }
+  }
+  if (adUnit && isAdRenderableEnvironment()) {
     window.adsbygoogle = window.adsbygoogle || [];
     try {
       window.adsbygoogle.push({});

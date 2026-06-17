@@ -17,31 +17,31 @@ function isAdRenderableEnvironment() {
   return window.location.protocol !== "file:" && hostname !== "localhost" && hostname !== "127.0.0.1";
 }
 
+function syncAdShellVisibility(shell, adUnit) {
+  const status = adUnit.getAttribute("data-ad-status");
+  if (status === "unfilled") {
+    shell.classList.add("is-hidden");
+    return;
+  }
+  shell.classList.remove("is-hidden");
+}
+
 function watchAdFill(shell, adUnit) {
-  let attempts = 0;
-  const maxAttempts = 24;
-  const timer = window.setInterval(() => {
-    attempts += 1;
-    const status = adUnit.getAttribute("data-ad-status");
-    const hasFrame = Boolean(adUnit.querySelector("iframe"));
-    const hasVisibleHeight = adUnit.getBoundingClientRect().height > 20;
+  syncAdShellVisibility(shell, adUnit);
 
-    if (status === "filled" || hasFrame || hasVisibleHeight) {
-      shell.classList.remove("is-hidden");
-      window.clearInterval(timer);
-      return;
-    }
+  const observer = new MutationObserver(() => {
+    syncAdShellVisibility(shell, adUnit);
+  });
 
-    if (status === "unfilled" || attempts >= maxAttempts) {
-      shell.classList.add("is-hidden");
-      window.clearInterval(timer);
-    }
-  }, 500);
+  observer.observe(adUnit, {
+    attributes: true,
+    attributeFilter: ["data-ad-status"],
+  });
 }
 
 function buildInlineAdMarkup(id, className, slot) {
   return `
-    <div class="article-ad-shell is-hidden ${className}" id="${id}">
+    <div class="article-ad-shell ${className}" id="${id}">
       <ins
         class="adsbygoogle article-top-ad"
         style="display:block"
@@ -70,7 +70,7 @@ async function renderArticle(item) {
       <h1>${escapeHtml(item.title)}</h1>
       <p class="article-summary">${escapeHtml(item.summary)}</p>
       <p class="meta">By ${escapeHtml(item.author || "Kick & Bass Editors")} / ${escapeHtml(item.city || "Global")}</p>
-      <div class="article-ad-shell is-hidden" id="articleTopAd">
+      <div class="article-ad-shell" id="articleTopAd">
         <ins
           class="adsbygoogle article-top-ad"
           style="display:block"
@@ -109,14 +109,18 @@ async function renderArticle(item) {
 }
 
 function initArticleAd() {
-  if (!articleTopAd.enabled || !articleTopAd.slot || !isAdRenderableEnvironment()) {
+  if (!articleTopAd.enabled || !articleTopAd.slot) {
+    return;
+  }
+  if (!isAdRenderableEnvironment()) {
+    document.getElementById("articleTopAd")?.classList.add("is-hidden");
     return;
   }
   initAdSlot("articleTopAd");
 }
 
 function insertInlineAd(articleBody) {
-  if (!articleBody || !articleInlineAd.enabled || !articleInlineAd.slot || !isAdRenderableEnvironment()) {
+  if (!articleBody || !articleInlineAd.enabled || !articleInlineAd.slot) {
     return;
   }
 
@@ -130,6 +134,11 @@ function insertInlineAd(articleBody) {
     "afterend",
     buildInlineAdMarkup("articleInlineAd", "article-inline-ad-shell", articleInlineAd.slot)
   );
+
+  if (!isAdRenderableEnvironment()) {
+    document.getElementById("articleInlineAd")?.classList.add("is-hidden");
+    return;
+  }
 
   initAdSlot("articleInlineAd");
 }
