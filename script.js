@@ -1,5 +1,5 @@
 const articles = window.SITE_ARTICLES || [];
-const manualTickerAd = window.MANUAL_TICKER_AD || {
+const homepageBannerAd = window.HOMEPAGE_BANNER_AD || {
   enabled: false,
   slot: "",
 };
@@ -48,13 +48,13 @@ if (lead) {
   `;
 }
 
-const sponsorLink = document.getElementById("tickerSponsor");
-if (sponsorLink && manualTickerAd.enabled && manualTickerAd.slot) {
-  const adUnit = sponsorLink.querySelector(".adsbygoogle");
+const homepageAdShell = document.getElementById("homepageAdShell");
+if (homepageAdShell && homepageBannerAd.enabled && homepageBannerAd.slot) {
+  const adUnit = homepageAdShell.querySelector(".adsbygoogle");
   if (adUnit) {
-    adUnit.setAttribute("data-ad-slot", String(manualTickerAd.slot));
+    adUnit.setAttribute("data-ad-slot", String(homepageBannerAd.slot));
   }
-  sponsorLink.classList.remove("is-hidden");
+  homepageAdShell.classList.remove("is-hidden");
   if (adUnit) {
     window.adsbygoogle = window.adsbygoogle || [];
     window.adsbygoogle.push({});

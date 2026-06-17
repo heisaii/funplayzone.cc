@@ -55,24 +55,18 @@
     <main>
       <section class="ticker" aria-label="Latest updates">
         <strong>On Rotation</strong>
-        <div class="ticker-rail">
-          <div
-            id="tickerSponsor"
-            class="ticker-sponsor is-hidden"
-            aria-label="Sponsored placement"
-          >
-            <span>Ad</span>
-            <ins
-              class="adsbygoogle ticker-ad"
-              style="display:block"
-              data-ad-client="ca-pub-3447911729170018"
-              data-ad-slot=""
-              data-ad-format="horizontal"
-              data-full-width-responsive="false"
-            ></ins>
-          </div>
-          <div id="tickerItems"></div>
-        </div>
+        <div id="tickerItems"></div>
+      </section>
+
+      <section class="homepage-ad-shell is-hidden" id="homepageAdShell" aria-label="Advertisement">
+        <ins
+          class="adsbygoogle homepage-ad"
+          style="display:block"
+          data-ad-client="ca-pub-3447911729170018"
+          data-ad-slot=""
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
       </section>
 
       <section class="front-grid" aria-label="Top stories">
@@ -144,7 +138,7 @@
 
     <script src="./data/articles.js"></script>
     <script>
-      window.MANUAL_TICKER_AD = {
+      window.HOMEPAGE_BANNER_AD = {
         enabled: true,
         slot: "8799430844",
       };
