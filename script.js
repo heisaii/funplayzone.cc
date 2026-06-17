@@ -1,4 +1,8 @@
 const articles = window.SITE_ARTICLES || [];
+const manualTickerAd = window.MANUAL_TICKER_AD || {
+  enabled: false,
+  slot: "",
+};
 const lead = articles.find((item) => item.featured) || articles[0];
 const secondary = articles.filter((item) => item.id !== lead.id);
 
@@ -42,6 +46,18 @@ if (lead) {
       </div>
     </a>
   `;
+}
+
+const sponsorLink = document.getElementById("tickerSponsor");
+if (sponsorLink && manualTickerAd.enabled && manualTickerAd.slot) {
+  const adUnit = sponsorLink.querySelector(".adsbygoogle");
+  if (adUnit) {
+    adUnit.setAttribute("data-ad-slot", String(manualTickerAd.slot));
+  }
+  sponsorLink.classList.remove("is-hidden");
+  if (window.adsbygoogle && adUnit) {
+    window.adsbygoogle.push({});
+  }
 }
 
 document.getElementById("tickerItems").innerHTML = articles

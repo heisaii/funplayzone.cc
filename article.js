@@ -3,6 +3,10 @@ const params = new URLSearchParams(window.location.search);
 const articleId = params.get("id");
 const articles = window.SITE_ARTICLES || [];
 const article = articles.find((item) => item.id === articleId);
+const articleTopAd = window.ARTICLE_TOP_AD || {
+  enabled: false,
+  slot: "",
+};
 
 if (!article) {
   renderNotFound();
@@ -20,12 +24,25 @@ async function renderArticle(item) {
       <h1>${escapeHtml(item.title)}</h1>
       <p class="article-summary">${escapeHtml(item.summary)}</p>
       <p class="meta">By ${escapeHtml(item.author || "Kick & Bass Editors")} / ${escapeHtml(item.city || "Global")}</p>
+      <div class="article-ad-shell ${articleTopAd.enabled && articleTopAd.slot ? "" : "is-hidden"}" id="articleTopAd">
+        <span>Ad</span>
+        <ins
+          class="adsbygoogle article-top-ad"
+          style="display:block"
+          data-ad-client="ca-pub-3447911729170018"
+          data-ad-slot="${escapeHtml(articleTopAd.slot)}"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+      </div>
       <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.imageAlt)}" />
     </header>
     <div class="article-body" id="articleBody">
       <p class="meta">Loading article...</p>
     </div>
   `;
+
+  initArticleAd();
 
   try {
     const response = await fetch(item.body);
@@ -41,6 +58,17 @@ async function renderArticle(item) {
         exists in the deployed repository.
       </p>
     `;
+  }
+}
+
+function initArticleAd() {
+  const adShell = document.getElementById("articleTopAd");
+  const adUnit = adShell?.querySelector(".adsbygoogle");
+  if (!adShell || !adUnit || !articleTopAd.enabled || !articleTopAd.slot) {
+    return;
+  }
+  if (window.adsbygoogle) {
+    window.adsbygoogle.push({});
   }
 }
 
