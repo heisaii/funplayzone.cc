@@ -8,6 +8,33 @@ const articleTopAd = window.ARTICLE_TOP_AD || {
   slot: "",
 };
 
+function isAdRenderableEnvironment() {
+  const hostname = window.location.hostname;
+  return window.location.protocol !== "file:" && hostname !== "localhost" && hostname !== "127.0.0.1";
+}
+
+function watchAdFill(shell, adUnit) {
+  let attempts = 0;
+  const maxAttempts = 24;
+  const timer = window.setInterval(() => {
+    attempts += 1;
+    const status = adUnit.getAttribute("data-ad-status");
+    const hasFrame = Boolean(adUnit.querySelector("iframe"));
+    const hasVisibleHeight = adUnit.getBoundingClientRect().height > 20;
+
+    if (status === "filled" || hasFrame || hasVisibleHeight) {
+      shell.classList.remove("is-hidden");
+      window.clearInterval(timer);
+      return;
+    }
+
+    if (status === "unfilled" || attempts >= maxAttempts) {
+      shell.classList.add("is-hidden");
+      window.clearInterval(timer);
+    }
+  }, 500);
+}
+
 if (!article) {
   renderNotFound();
 } else {
@@ -25,7 +52,6 @@ async function renderArticle(item) {
       <p class="article-summary">${escapeHtml(item.summary)}</p>
       <p class="meta">By ${escapeHtml(item.author || "Kick & Bass Editors")} / ${escapeHtml(item.city || "Global")}</p>
       <div class="article-ad-shell ${articleTopAd.enabled && articleTopAd.slot ? "" : "is-hidden"}" id="articleTopAd">
-        <span>Ad</span>
         <ins
           class="adsbygoogle article-top-ad"
           style="display:block"
@@ -64,11 +90,16 @@ async function renderArticle(item) {
 function initArticleAd() {
   const adShell = document.getElementById("articleTopAd");
   const adUnit = adShell?.querySelector(".adsbygoogle");
-  if (!adShell || !adUnit || !articleTopAd.enabled || !articleTopAd.slot) {
+  if (!adShell || !adUnit || !articleTopAd.enabled || !articleTopAd.slot || !isAdRenderableEnvironment()) {
     return;
   }
+  watchAdFill(adShell, adUnit);
   window.adsbygoogle = window.adsbygoogle || [];
-  window.adsbygoogle.push({});
+  try {
+    window.adsbygoogle.push({});
+  } catch (error) {
+    adShell.classList.add("is-hidden");
+  }
 }
 
 function renderNotFound() {

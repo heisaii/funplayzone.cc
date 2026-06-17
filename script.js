@@ -16,6 +16,33 @@ const text = (value) =>
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
 
+function isAdRenderableEnvironment() {
+  const hostname = window.location.hostname;
+  return window.location.protocol !== "file:" && hostname !== "localhost" && hostname !== "127.0.0.1";
+}
+
+function watchAdFill(shell, adUnit) {
+  let attempts = 0;
+  const maxAttempts = 24;
+  const timer = window.setInterval(() => {
+    attempts += 1;
+    const status = adUnit.getAttribute("data-ad-status");
+    const hasFrame = Boolean(adUnit.querySelector("iframe"));
+    const hasVisibleHeight = adUnit.getBoundingClientRect().height > 20;
+
+    if (status === "filled" || hasFrame || hasVisibleHeight) {
+      shell.classList.remove("is-hidden");
+      window.clearInterval(timer);
+      return;
+    }
+
+    if (status === "unfilled" || attempts >= maxAttempts) {
+      shell.classList.add("is-hidden");
+      window.clearInterval(timer);
+    }
+  }, 500);
+}
+
 function meta(article) {
   return `<p class="meta">${text(article.section)} / ${text(article.time)} / ${text(article.city || "Global")}</p>`;
 }
@@ -49,15 +76,19 @@ if (lead) {
 }
 
 const homepageAdShell = document.getElementById("homepageAdShell");
-if (homepageAdShell && homepageBannerAd.enabled && homepageBannerAd.slot) {
+if (homepageAdShell && homepageBannerAd.enabled && homepageBannerAd.slot && isAdRenderableEnvironment()) {
   const adUnit = homepageAdShell.querySelector(".adsbygoogle");
   if (adUnit) {
     adUnit.setAttribute("data-ad-slot", String(homepageBannerAd.slot));
+    watchAdFill(homepageAdShell, adUnit);
   }
-  homepageAdShell.classList.remove("is-hidden");
   if (adUnit) {
     window.adsbygoogle = window.adsbygoogle || [];
-    window.adsbygoogle.push({});
+    try {
+      window.adsbygoogle.push({});
+    } catch (error) {
+      homepageAdShell.classList.add("is-hidden");
+    }
   }
 }
 
