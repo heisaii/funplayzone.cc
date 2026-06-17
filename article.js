@@ -67,9 +67,8 @@ function initArticleAd() {
   if (!adShell || !adUnit || !articleTopAd.enabled || !articleTopAd.slot) {
     return;
   }
-  if (window.adsbygoogle) {
-    window.adsbygoogle.push({});
-  }
+  window.adsbygoogle = window.adsbygoogle || [];
+  window.adsbygoogle.push({});
 }
 
 function renderNotFound() {

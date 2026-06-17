@@ -55,7 +55,8 @@ if (sponsorLink && manualTickerAd.enabled && manualTickerAd.slot) {
     adUnit.setAttribute("data-ad-slot", String(manualTickerAd.slot));
   }
   sponsorLink.classList.remove("is-hidden");
-  if (window.adsbygoogle && adUnit) {
+  if (adUnit) {
+    window.adsbygoogle = window.adsbygoogle || [];
     window.adsbygoogle.push({});
   }
 }
