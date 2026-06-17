@@ -7,6 +7,10 @@ const articleTopAd = window.ARTICLE_TOP_AD || {
   enabled: false,
   slot: "",
 };
+const articleInlineAd = window.ARTICLE_INLINE_AD || {
+  enabled: false,
+  slot: "",
+};
 
 function isAdRenderableEnvironment() {
   const hostname = window.location.hostname;
@@ -35,6 +39,21 @@ function watchAdFill(shell, adUnit) {
   }, 500);
 }
 
+function buildInlineAdMarkup(id, className, slot) {
+  return `
+    <div class="article-ad-shell is-hidden ${className}" id="${id}">
+      <ins
+        class="adsbygoogle article-top-ad"
+        style="display:block"
+        data-ad-client="ca-pub-3447911729170018"
+        data-ad-slot="${escapeHtml(slot)}"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+    </div>
+  `;
+}
+
 if (!article) {
   renderNotFound();
 } else {
@@ -51,7 +70,7 @@ async function renderArticle(item) {
       <h1>${escapeHtml(item.title)}</h1>
       <p class="article-summary">${escapeHtml(item.summary)}</p>
       <p class="meta">By ${escapeHtml(item.author || "Kick & Bass Editors")} / ${escapeHtml(item.city || "Global")}</p>
-      <div class="article-ad-shell ${articleTopAd.enabled && articleTopAd.slot ? "" : "is-hidden"}" id="articleTopAd">
+      <div class="article-ad-shell is-hidden" id="articleTopAd">
         <ins
           class="adsbygoogle article-top-ad"
           style="display:block"
@@ -76,7 +95,9 @@ async function renderArticle(item) {
       throw new Error(`Article file returned ${response.status}`);
     }
     const markdown = await response.text();
-    document.getElementById("articleBody").innerHTML = markdownToHtml(markdown);
+    const articleBody = document.getElementById("articleBody");
+    articleBody.innerHTML = markdownToHtml(markdown);
+    insertInlineAd(articleBody);
   } catch (error) {
     document.getElementById("articleBody").innerHTML = `
       <p class="article-error">
@@ -88,9 +109,35 @@ async function renderArticle(item) {
 }
 
 function initArticleAd() {
-  const adShell = document.getElementById("articleTopAd");
+  if (!articleTopAd.enabled || !articleTopAd.slot || !isAdRenderableEnvironment()) {
+    return;
+  }
+  initAdSlot("articleTopAd");
+}
+
+function insertInlineAd(articleBody) {
+  if (!articleBody || !articleInlineAd.enabled || !articleInlineAd.slot || !isAdRenderableEnvironment()) {
+    return;
+  }
+
+  const paragraphs = Array.from(articleBody.children).filter((element) => element.tagName === "P");
+  if (paragraphs.length < 2) {
+    return;
+  }
+
+  const anchor = paragraphs[1];
+  anchor.insertAdjacentHTML(
+    "afterend",
+    buildInlineAdMarkup("articleInlineAd", "article-inline-ad-shell", articleInlineAd.slot)
+  );
+
+  initAdSlot("articleInlineAd");
+}
+
+function initAdSlot(id) {
+  const adShell = document.getElementById(id);
   const adUnit = adShell?.querySelector(".adsbygoogle");
-  if (!adShell || !adUnit || !articleTopAd.enabled || !articleTopAd.slot || !isAdRenderableEnvironment()) {
+  if (!adShell || !adUnit) {
     return;
   }
   watchAdFill(adShell, adUnit);
