@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://funplayzone.cc/sitemap.xml
+Sitemap: https://news.funplayzone.cc/sitemap.xml

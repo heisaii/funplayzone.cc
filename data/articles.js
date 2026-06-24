@@ -1,5 +1,57 @@
 window.SITE_ARTICLES = [
   {
+    "id": "2026-06-24-streaming-the-legend-what-netflix-could-do-to-the-music-biopic",
+    "section": "Music Film",
+    "label": "Biopic Watch",
+    "kicker": "Streaming",
+    "title": "Streaming the Legend: What Netflix Could Do to the Music Biopic",
+    "summary": "Netflix and Warner Music Group could reshape the music biopic market, but only if access does not turn biography into catalog protection.",
+    "image": "./assets/images/posts/2026-06-24-streaming-the-legend-what-netflix-could-do-to-the-music-biopic/cover.webp",
+    "imageAlt": "Editorial music culture cover for Streaming the Legend: What Netflix Could Do to the Music Biopic",
+    "time": "June 24, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Global",
+    "body": "./content/articles/2026-06-24-streaming-the-legend-what-netflix-could-do-to-the-music-biopic.md",
+    "featured": true,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Verified links"
+      },
+      {
+        "title": "Culture angle",
+        "note": "Editor read"
+      }
+    ]
+  },
+  {
+    "id": "2026-06-24-the-wig-in-the-mirror-why-miley-cyrus-is-finally-making-peace-with-hannah-montana",
+    "section": "Pop Culture",
+    "label": "Pop Memory",
+    "kicker": "Miley Cyrus",
+    "title": "The Wig in the Mirror: Why Miley Cyrus Is Finally Making Peace With Hannah Montana",
+    "summary": "Miley Cyrus revisits Hannah Montana not as a trap to escape, but as an earlier self she can finally fold back into her own mythology.",
+    "image": "./assets/images/posts/2026-06-24-the-wig-in-the-mirror-why-miley-cyrus-is-finally-making-peace-with-hannah-montana/cover.webp",
+    "imageAlt": "Editorial music culture cover for The Wig in the Mirror: Why Miley Cyrus Is Finally Making Peace With Hannah Montana",
+    "time": "June 24, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Los Angeles",
+    "body": "./content/articles/2026-06-24-the-wig-in-the-mirror-why-miley-cyrus-is-finally-making-peace-with-hannah-montana.md",
+    "featured": false,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Verified links"
+      },
+      {
+        "title": "Culture angle",
+        "note": "Editor read"
+      }
+    ]
+  },
+  {
     "id": "2026-06-15-can-shakira-and-burna-boy-dai-dai-bring-back-the-world-cup-anthem",
     "section": "Music News",
     "label": "Anthem Watch",
@@ -12,7 +64,7 @@ window.SITE_ARTICLES = [
     "author": "Kick & Bass Editors",
     "city": "Global",
     "body": "./content/articles/2026-06-15-can-shakira-and-burna-boy-dai-dai-bring-back-the-world-cup-anthem.md",
-    "featured": true,
+    "featured": false,
     "type": "feature",
     "tracks": [
       {
