@@ -1,5 +1,135 @@
 window.SITE_ARTICLES = [
   {
+    "id": "2026-06-26-world-cup-june-26-watch-guide-tournament-turning-point",
+    "section": "World Cup",
+    "label": "Watch Guide",
+    "kicker": "Matchday",
+    "title": "World Cup June 26 Watch Guide: Why Today Feels Like the Tournament Turning Point",
+    "image": "./assets/images/posts/2026-06-26-world-cup-june-26-watch-guide-tournament-turning-point/cover.webp",
+    "imageAlt": "Editorial World Cup cover for World Cup June 26 Watch Guide: Why Today Feels Like the Tournament Turning Point",
+    "time": "June 26, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "North America",
+    "body": "./content/articles/2026-06-26-world-cup-june-26-watch-guide-tournament-turning-point.md",
+    "featured": true,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "The Economic Times"
+      },
+      {
+        "title": "World Cup angle",
+        "note": "Watch Guide"
+      }
+    ],
+    "summary": "A readable guide to why June 26 matters in the 2026 World Cup group stage, from timezone confusion to the coming Round of 32."
+  },
+  {
+    "id": "2026-06-26-third-place-race-hidden-story-2026-world-cup",
+    "section": "World Cup",
+    "label": "Explainer",
+    "kicker": "Format",
+    "title": "The Third-Place Race Is the Hidden Story of the 2026 World Cup",
+    "image": "./assets/images/posts/2026-06-26-third-place-race-hidden-story-2026-world-cup/cover.webp",
+    "imageAlt": "Editorial World Cup cover for The Third-Place Race Is the Hidden Story of the 2026 World Cup",
+    "time": "June 26, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Global",
+    "body": "./content/articles/2026-06-26-third-place-race-hidden-story-2026-world-cup.md",
+    "featured": false,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "SB Nation"
+      },
+      {
+        "title": "World Cup angle",
+        "note": "Explainer"
+      }
+    ],
+    "summary": "A plain-English explanation of why third-place teams matter so much in the expanded 48-team World Cup format."
+  },
+  {
+    "id": "2026-06-26-paraguay-australia-safe-world-cup-games-fascinating",
+    "section": "Match Focus",
+    "label": "Tactical Read",
+    "kicker": "Group Stage",
+    "title": "Paraguay vs Australia Shows Why Safe World Cup Games Can Still Be Fascinating",
+    "image": "./assets/images/posts/2026-06-26-paraguay-australia-safe-world-cup-games-fascinating/cover.webp",
+    "imageAlt": "Editorial World Cup cover for Paraguay vs Australia Shows Why Safe World Cup Games Can Still Be Fascinating",
+    "time": "June 26, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "San Francisco Bay Area",
+    "body": "./content/articles/2026-06-26-paraguay-australia-safe-world-cup-games-fascinating.md",
+    "featured": false,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "The Guardian"
+      },
+      {
+        "title": "World Cup angle",
+        "note": "Tactical Read"
+      }
+    ],
+    "summary": "A tactical, reader-friendly look at why Paraguay against Australia became a fascinating final group-stage pressure game."
+  },
+  {
+    "id": "2026-06-26-group-f-world-cup-knockout-warning-signs",
+    "section": "Tournament Analysis",
+    "label": "Knockout Watch",
+    "kicker": "Group F",
+    "title": "Group F Gave the 2026 World Cup Its First Knockout Warning Signs",
+    "image": "./assets/images/posts/2026-06-26-group-f-world-cup-knockout-warning-signs/cover.webp",
+    "imageAlt": "Editorial World Cup cover for Group F Gave the 2026 World Cup Its First Knockout Warning Signs",
+    "time": "June 26, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Global",
+    "body": "./content/articles/2026-06-26-group-f-world-cup-knockout-warning-signs.md",
+    "featured": false,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "The Guardian"
+      },
+      {
+        "title": "World Cup angle",
+        "note": "Knockout Watch"
+      }
+    ],
+    "summary": "What the Netherlands, Japan, and Sweden showed as Group F settled its knockout picture at the 2026 World Cup."
+  },
+  {
+    "id": "2026-06-26-why-2026-world-cup-is-becoming-super-subs-tournament",
+    "section": "World Cup Features",
+    "label": "Squad Depth",
+    "kicker": "Tactics",
+    "title": "Why the 2026 World Cup Is Becoming a Tournament for Super-Subs",
+    "image": "./assets/images/posts/2026-06-26-why-2026-world-cup-is-becoming-super-subs-tournament/cover.webp",
+    "imageAlt": "Editorial World Cup cover for Why the 2026 World Cup Is Becoming a Tournament for Super-Subs",
+    "time": "June 26, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Global",
+    "body": "./content/articles/2026-06-26-why-2026-world-cup-is-becoming-super-subs-tournament.md",
+    "featured": false,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "New York Post"
+      },
+      {
+        "title": "World Cup angle",
+        "note": "Squad Depth"
+      }
+    ],
+    "summary": "Deniz Undav’s breakout shows why bench impact, rotation, and squad depth may define the 2026 World Cup."
+  },
+  {
     "id": "2026-06-24-streaming-the-legend-what-netflix-could-do-to-the-music-biopic",
     "section": "Music Film",
     "label": "Biopic Watch",
@@ -12,7 +142,7 @@ window.SITE_ARTICLES = [
     "author": "Kick & Bass Editors",
     "city": "Global",
     "body": "./content/articles/2026-06-24-streaming-the-legend-what-netflix-could-do-to-the-music-biopic.md",
-    "featured": true,
+    "featured": false,
     "type": "feature",
     "tracks": [
       {
