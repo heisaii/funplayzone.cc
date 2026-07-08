@@ -14,6 +14,14 @@
       content="A static editorial site for World Cup 2026 music news, playlist culture, city scenes, and matchday sound."
     />
     <meta property="og:type" content="website" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLRVYZLVB2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-KLRVYZLVB2");
+    </script>
     <link rel="preconnect" href="https://images.unsplash.com" />
     <script
       async
@@ -71,6 +79,19 @@
 
       <section class="front-grid" aria-label="Top stories">
         <article class="lead-story" id="leadStory"></article>
+        <a
+          class="sponsor-banner"
+          href="https://www.vizasound.com?utm_source=oppo&utm_medium=splash&utm_campaign=es_launch"
+          target="_blank"
+          rel="noopener sponsored"
+          aria-label="Visit Vizasound The AI Idols"
+        >
+          <img
+            src="./assets/images/ads/vizasound-theaidol.webp"
+            alt="The AI Idols by Vizasound: upload your voice, drop an AI hit, and win $1000"
+            loading="lazy"
+          />
+        </a>
         <aside class="stack-column" id="stackColumn"></aside>
         <aside class="chart-panel">
           <p class="eyebrow">Tracklist</p>
