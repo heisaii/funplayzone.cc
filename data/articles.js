@@ -1,5 +1,83 @@
 window.SITE_ARTICLES = [
   {
+    "id": "2026-07-10-who-will-win-2026-world-cup-now-france-spain-argentina",
+    "section": "Tournament Analysis",
+    "label": "Title Forecast",
+    "kicker": "Quarterfinals",
+    "title": "Who Will Win the 2026 World Cup Now? France Lead, but Spain and Argentina Still Complicate the Bracket",
+    "image": "./assets/images/posts/2026-07-10-who-will-win-2026-world-cup-now-france-spain-argentina/cover.webp",
+    "imageAlt": "Editorial World Cup cover for Who Will Win the 2026 World Cup Now? France Lead, but Spain and Argentina Still Complicate the Bracket",
+    "time": "July 10, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Global",
+    "body": "./content/articles/2026-07-10-who-will-win-2026-world-cup-now-france-spain-argentina.md",
+    "featured": true,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "The Guardian"
+      },
+      {
+        "title": "World Cup angle",
+        "note": "Title Forecast"
+      }
+    ],
+    "summary": "A current World Cup title prediction after France reached the semifinals, with Spain, Argentina, England, Norway, Belgium, and Switzerland still alive."
+  },
+  {
+    "id": "2026-07-10-france-2-0-morocco-first-quarterfinal-changed-world-cup",
+    "section": "Match Analysis",
+    "label": "Quarterfinal Read",
+    "kicker": "France 2-0 Morocco",
+    "title": "France 2-0 Morocco: What the First 2026 World Cup Quarterfinal Changed",
+    "image": "./assets/images/posts/2026-07-10-france-2-0-morocco-first-quarterfinal-changed-world-cup/cover.webp",
+    "imageAlt": "Editorial World Cup cover for France 2-0 Morocco: What the First 2026 World Cup Quarterfinal Changed",
+    "time": "July 10, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "Boston",
+    "body": "./content/articles/2026-07-10-france-2-0-morocco-first-quarterfinal-changed-world-cup.md",
+    "featured": false,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Times of India"
+      },
+      {
+        "title": "World Cup angle",
+        "note": "Match Analysis"
+      }
+    ],
+    "summary": "France are the first confirmed semifinalist after beating Morocco 2-0, and the result changes the rhythm of the whole World Cup bracket."
+  },
+  {
+    "id": "2026-07-10-world-cup-quarterfinal-watch-guide-spain-belgium-norway-england-argentina-switzerland",
+    "section": "World Cup Guide",
+    "label": "Watch Guide",
+    "kicker": "Quarterfinals",
+    "title": "World Cup Quarterfinal Watch Guide: Spain-Belgium, Norway-England, Argentina-Switzerland",
+    "image": "./assets/images/posts/2026-07-10-world-cup-quarterfinal-watch-guide-spain-belgium-norway-england-argentina-switzerland/cover.webp",
+    "imageAlt": "Editorial World Cup cover for World Cup Quarterfinal Watch Guide: Spain-Belgium, Norway-England, Argentina-Switzerland",
+    "time": "July 10, 2026",
+    "author": "Kick & Bass Editors",
+    "city": "North America",
+    "body": "./content/articles/2026-07-10-world-cup-quarterfinal-watch-guide-spain-belgium-norway-england-argentina-switzerland.md",
+    "featured": false,
+    "type": "feature",
+    "tracks": [
+      {
+        "title": "Source check",
+        "note": "Economic Times"
+      },
+      {
+        "title": "World Cup angle",
+        "note": "Watch Guide"
+      }
+    ],
+    "summary": "A practical guide to the three remaining 2026 World Cup quarterfinals after France became the first confirmed semifinalist."
+  },
+  {
     "id": "2026-06-26-world-cup-june-26-watch-guide-tournament-turning-point",
     "section": "World Cup",
     "label": "Watch Guide",
@@ -11,7 +89,7 @@ window.SITE_ARTICLES = [
     "author": "Kick & Bass Editors",
     "city": "North America",
     "body": "./content/articles/2026-06-26-world-cup-june-26-watch-guide-tournament-turning-point.md",
-    "featured": true,
+    "featured": false,
     "type": "feature",
     "tracks": [
       {
